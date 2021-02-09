@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="images/wallet-icon.jpg" type="image/icon type">
+    <title>Money Tracker</title>
+</head>
+<body>
+    <header class='main-header'>
+        <div class='container'>
+            <div class="navheader">
+                <a href="index.html" class="logo-link">
+                    <div class="logo"></div>
+                </a>
+                <h1>Money Tracker</h1>
+            </div>
+            <ul class="navlist">
+                <li class="home">
+                    <a href="index.html">
+                        <span>Home</span>   
+                    </a>
+                </li>
+                <li class="earnings">
+                    <a href="earning.html">
+                        <span>Earnings</span>
+                    </a>
+                </li>
+                <li class="expenses">
+                   <a href="expense.html">
+                       <span>Expenses</span>
+                   </a>
+                </li>
+                <li class=records>
+                    <a href="index.html #records">
+                        <span>Records</span>
+                    </a>
+                </li>
+            </ul>
+        </div>      
+    </header>
+    
+    <div class="container">
+        <div class="form">
+        <form class="earning-form ">
+            <fieldset>
+                <legend>Add Earning</legend>
+                <div class="date">
+                    <label for="date">Date:    </label>
+                    <input type="text"name="date">
+                </div>
+                <div class="category">
+                    <label for="earning-category">Category: </label>
+                    <select  name="earning-category">
+                       <option value="check">Checks, Coupons</option>
+                       <option value="gift">Gifts</option>
+                       <option value="salary">Salary</option>
+                       <option value="lend">Lending, Renting</option>
+                       <option value="rent">Rental Income</option>
+                       <option value="refund">Refunds</option>
+                       <option value="sale">Sale</option>
+                       <option value="dues">Dues & grants</option>
+                       <option value="interest">Interests, Dividends</option>
+                       <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="amt">
+                    <label for="amount">Amount: </label> </label>
+                    <input type="text" name="amount">
+                </div>
+                <div class="note">
+                    <label for="note">Note: </label>
+                    <input type="text" name="note">
+                </div>
+                <div>
+                    <input type="submit" value="ADD">
+                </div>
+            </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <table class="records">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Note</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1/12/2020</td>
+                    <td>Salary</td>
+                    <td>+ Rs. 50,000</td>
+                    <td>-</td>
+                </tr>
+                
+            </tbody> 
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>

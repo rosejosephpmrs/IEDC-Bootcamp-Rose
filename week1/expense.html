@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="images/wallet-icon.jpg" type="image/icon type">
+    <title>Money Tracker</title>
+</head>
+<body>
+    <header class='main-header'>
+        <div class='container'>
+            <div class="navheader">
+                <a href="index.html" class="logo-link">
+                    <div class="logo"></div>
+                </a>
+                <h1>Money Tracker</h1>
+            </div>
+            <ul class="navlist">
+                <li class="home">
+                    <a href="index.html">
+                        <span>Home</span>   
+                    </a>
+                </li>
+                <li class="earnings">
+                    <a href="earning.html">
+                        <span>Earnings</span>
+                    </a>
+                </li>
+                <li class="expenses">
+                   <a href="expense.html">
+                       <span>Expenses</span>
+                   </a>
+                </li>
+                <li class=records>
+                    <a href="index.html #records">
+                        <span>Records</span>
+                    </a>
+                </li>
+            </ul>
+        </div>      
+    </header>
+   
+
+    <div class="container">
+        <div class="form">
+        <form class="expense-form ">
+            <fieldset>
+                <legend>Add Expense</legend>
+                <div class="date">
+                    <label for="date">Date:    </label>
+                    <input type="text"name="date">
+                </div>
+                <div class="category">
+                    <label for="expense-category">Category: </label>
+                    <select  name="expense-category">
+                       <option value="food">Food</option>
+                       <option value="shopping">Shopping</option>
+                       <option value="housing">Housing</option>
+                       <option value="trans">Transportation</option>
+                       <option value="vehicle">Vehicle</option>
+                       <option value="enter">Entertainment</option>
+                       <option value="com">Communication</option>
+                       <option value="invest">Investments</option>
+                       <option value="finance">Financial Expenses</option>
+                       <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="amt">
+                    <label for="amount">Amount: </label> </label>
+                    <input type="text" name="amount">
+                </div>
+                <div class="note">
+                    <label for="note">Note: </label>
+                    <input type="text" name="note">
+                </div>
+                <div>
+                    <input type="submit" value="ADD">
+                </div>
+            </fieldset>
+        </form>
+      </div>
+    </div>
+
+        <div class="container">
+            <table class="records">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Note</th>
+                </tr>
+                </thead>
+                <tbody>
+            
+                <tr>
+                    <td>5/12/2020</td>
+                    <td>Food</td>
+                    <td>- Rs. 500</td>
+                    <td>Fried Chicken</td>
+                </tr>
+            </tbody> 
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>

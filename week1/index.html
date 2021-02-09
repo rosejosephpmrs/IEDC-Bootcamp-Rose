@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="images/wallet-icon.jpg" type="image/icon type">
+    <title>Money Tracker</title>
+</head>
+<body>
+    <header class='main-header'>
+        <div class='container'>
+            <div class="navheader">
+                <a href="index.html" class="logo-link">
+                    <div class="logo"></div>
+                </a>
+                <h1>Money Tracker</h1>
+            </div>
+            <ul class="navlist">
+                <li class="home">
+                    <a href="index.html">
+                        <span>Home</span>   
+                    </a>
+                </li>
+                <li class="earnings">
+                    <a href="earning.html">
+                        <span>Earnings</span>
+                    </a>
+                </li>
+                <li class="expenses">
+                   <a href="expense.html">
+                       <span>Expenses</span>
+                   </a>
+                </li>
+                <li class=records>
+                    <a href="#records">
+                        <span>Records</span>
+                    </a>
+                </li>
+            </ul>
+        </div>      
+    </header>
+
+    <section class="main-section">
+      <div class="container">
+          <div class="box">
+            <div class="add">
+                 <h3 class="add-bar">+ ADD</h3>
+                 <div class="add-inner">
+                   <div class="earning">
+                    <a href="earning.html">  
+                      <h4>Earning</h4>
+                      <div class="earning-img"></div>
+                    </a> 
+                   </div>
+                   <div class="expense">
+                    <a href="expense.html">
+                    <h4>Expense</h4>
+                    <div class="expense-img"></div>
+                </a>
+                   </div>
+                 </div><!--add-inner-->
+            </div><!--add-->
+            <div class="total">
+             <h2>Total Balance </h2>
+             <p>₹49,500</p>
+            </div><!--total-->
+          </div><!--box-->
+          
+      </div><!--container-->
+    </section>
+
+    <section>
+        <div class="container">
+            <table id="records">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Note</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1/12/2020</td>
+                    <td>Salary</td>
+                    <td>+ Rs. 50,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5/12/2020</td>
+                    <td>Food</td>
+                    <td>- Rs. 500</td>
+                    <td>Fried Chicken</td>
+                </tr>
+            </tbody> 
+            </table>
+        </div>
+    </section>
+</body>
+</html>
