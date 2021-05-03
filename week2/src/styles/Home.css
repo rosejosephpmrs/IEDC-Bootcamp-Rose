@@ -1,0 +1,76 @@
+.container{
+    width:80%;
+}
+.main-section{
+    margin-top: 80px;
+}
+.box{
+    display: flex;
+    align-items: flex-start;
+}
+.add{
+    flex:2;
+    background-color: rgb(143, 209, 209);
+    padding:0;
+    margin-right: 30px;
+    border-radius: 0.2em;
+}
+.add-bar{
+    margin:0;
+    background-color:rgb(216, 225, 236);
+    padding: 20px;
+    color: teal;
+}
+.total{
+    flex:1;
+    background-color: rgb(216, 225, 236);
+    border-radius: 0.2em;
+    padding:20px 0 20px 25px;
+    color:teal;
+    font-size: 1.2em;
+}
+.add-inner{
+    display: flex;
+}
+.earning{
+    flex:1;
+    padding-bottom:30px;
+}
+.expense{
+    flex:1;
+  padding-bottom: 30px;;
+}
+.expense:hover{
+    box-shadow: 0px 1px 5px 0px #636262;
+}
+.earning:hover{
+    box-shadow: 0px 1px 5px 0px #636262;
+}
+h4{
+    text-align: center;
+    font-size: 1.1em;
+    color:rgb(88, 85, 85);
+}
+.expense-img{
+    background-image: url("../assets/expense.png");
+    border-radius: 1.5em;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    margin:auto;
+}
+.earning-img{
+    background-image: url("../assets/income.jpg");
+    border-radius: 1.5em;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    margin:auto;
+
+}
+@media screen and (max-width: 847px){
+  .add{
+      display:none;
+  }
+
+}

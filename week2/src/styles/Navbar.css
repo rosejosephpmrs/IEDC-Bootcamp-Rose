@@ -1,0 +1,128 @@
+body{
+    font-family: 'Oxygen', sans-serif;
+  margin:0;
+  box-sizing: border-box;
+}
+.container{
+    width:90%;
+    margin:auto;
+    overflow:hidden;
+}
+.main-header{
+   background-color: rgb(75,175,175);
+   height: 100px;
+}
+.logo{
+    background-image: url("../assets/wallet-icon.png");
+    height:70px;
+    width: 70px;
+    background-position: center;
+    border-radius: 3em;
+    margin: 17px 8px 10px 0;
+    float: left;
+    display: inline;
+}
+.navheader{
+    padding: 0;
+    margin-left:0;
+}
+.navheader h1{
+ float: left;
+ text-shadow: 1px 1px 2px #222;
+ color:rgb(255, 255, 255);
+ padding: 20px 0 0 20px;
+ margin-top: 10px;
+ margin-right: 0;
+ text-transform: uppercase;
+ font-size: 1.75em;
+}
+.navlist{
+    float:right;
+    list-style: none;
+}
+.navlist li{
+    float:left;
+    padding:20px 0 0 20px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+.navlist a{
+    color:ivory;
+    font-size: 1em;
+    padding:10px;
+    font-weight: 500;
+}
+.fa-bars{
+    color:ivory;
+}
+.fa-times{
+    color:ivory;
+}
+.menu-icon{
+    display:none;
+}
+
+@media screen and (max-width: 847px){
+    .main-header{
+        position:relative;
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 212px;
+        position:absolute;
+        top:80px;
+        left:-100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        padding:0;
+        
+        
+    }
+    .navlist.menu{
+        background: rgb(143, 209, 209) ;
+        left:0%;
+        opacity:1;
+        transition: all 0.5s ease;
+        z-index:1;
+    }
+    .navlist li{
+        padding:0;
+    }
+    .navlist a{
+        text-align: center;
+        padding:1rem;
+        width:100%;
+        display: table;
+        
+    }
+    .navlist a:hover{
+        border-radius: 0;
+        margin:0;
+        cursor: pointer;
+        box-shadow: none;
+        font-weight: 600;
+        width:100%;  
+        background: #a8dada;
+        color:rgb(105, 105, 96)
+    }
+    .menu-icon{
+        display: block;
+        position:absolute;
+        top:0;
+        right:0;
+        transform:translate(-100%,80%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+   
+
+}
+
+

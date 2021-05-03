@@ -1,0 +1,79 @@
+.container{
+    width:80%;
+}
+.form{
+    width:100%;
+    justify-content: center;
+    display:flex;
+    margin-top: 50px;
+}
+fieldset{
+    border:none;
+    background-color: rgb(216, 225, 236);
+    padding: 50px;
+    box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+}
+legend{
+    background-color: cadetblue;
+    color: white;
+   padding:5px 10px;
+}
+label {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: cadetblue;
+   
+}
+input[type="text"],input[type="number"]{
+    border: none;
+    border-bottom: 2px solid cadetblue;
+    background-color:rgb(216, 225, 236) ;
+    width:90%;
+    border-radius: 0.2em;
+    height:18px;
+    padding:5px;
+    letter-spacing: 1px;
+}
+  input[type="date"],select{
+    border: none;
+    border-radius: 2px;
+    background-color: cadetblue;
+    height:28px ;
+    color:white;
+    padding-left:5px;
+    display:block;
+    margin-top: 5px;
+    cursor: pointer;
+    width:90%;
+  }
+  
+
+.select-selected:after{
+    border:none;
+}
+  input:focus,
+button:focus,select:focus {
+    outline: none;
+    
+}
+.form div{
+    margin:10px 10px 20px 10px;
+}
+button{
+    background-color: cadetblue;
+    border:none;
+    color:white;
+    padding:10px 20px 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+button:hover{
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.18);
+}
+.form p{
+    font-size: small;
+    color:rgb(201, 54, 54);
+    padding:0;
+    margin: 1px;
+}
