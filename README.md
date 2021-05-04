@@ -1,1 +1,1 @@
-# IEDC-ReactJS-Bootcamp-RoseJoseph
+# IEDC-ReactJS-Bootcamp
