@@ -17,8 +17,8 @@ function App(){
           <Navbar/>
           <Switch>
             <Route path='/' exact ><Home bal={balance} data={data}/></Route>
-            <Route path='/earnings'><Earnings bal={balance} setBalance={setBalance} data={data} setData={setData}/></Route>
-            <Route path='/expenses'><Expenses bal={balance} setBalance={setBalance} data={data} setData={setData} /></Route>
+            <Route path='/earnings'><Earnings setBalance={setBalance} data={data} setData={setData} /></Route>
+            <Route path='/expenses'><Expenses setBalance={setBalance} data={data} setData={setData} /></Route>
             <Route path='/records'><Records data={data}/></Route>
           </Switch>
         </Router>

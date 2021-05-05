@@ -2,9 +2,9 @@ import React,{useState,useEffect} from 'react'
 import '../styles/Form.css'
 import {validateInfo} from './validateInfo'
 
-export default function Form({balance,setBalance,data,setData,page,categories}) {
+export default function Form({setBalance,setData,page,categories}) {
 
-    const [state,setState] = useState({date:"",category:"",amount:"",note:"",type:page}) 
+    const [state,setState] = useState({id:Math.floor(Math.random()*1000),date:"",category:"",amount:"",note:"",type:page}) 
     const [errors,setErrors]= useState({})
     const [submitting,setSubmitting]=useState(false)
 
@@ -18,6 +18,7 @@ export default function Form({balance,setBalance,data,setData,page,categories}) 
         setErrors(validateInfo(state))
         setSubmitting(true)
     }
+
     useEffect(()=>{
         if(Object.keys(errors).length===0 && submitting){
             setBalance((prevState)=> page==="earning"? prevState+ state.amount: prevState-state.amount)
