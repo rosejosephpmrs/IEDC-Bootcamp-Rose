@@ -19,15 +19,13 @@ text-align: center;
 color:rgb(48, 66, 66);
 margin-bottom: 80px;
 }
-.fa-trash-alt{
-    font-size: 1.25em;
+.fa-trash-alt,.fa-edit{
+    font-size: 1em;
 }
-.delete{
-    text-align: center;
-    margin:0;
-    padding: 0;
-    padding-top: 7px;
-}
-.delete:hover{
+
+.delete:hover,.edit:hover{
     cursor: pointer;
+}
+.edit,.delete{
+    width: 5px;
 }

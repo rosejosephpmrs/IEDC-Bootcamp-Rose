@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import '../styles/Form.css'
 import {validateInfo} from './validateInfo'
 
-export default function Form({setBalance,setData,page,categories}) {
+export default function Form({setBalance,setData,page,categories,edit,setEdit}) {
 
     const [state,setState] = useState({id:Math.floor(Math.random()*1000),date:"",category:"",amount:"",note:"",type:page}) 
     const [errors,setErrors]= useState({})
@@ -20,20 +20,32 @@ export default function Form({setBalance,setData,page,categories}) {
     }
 
     useEffect(()=>{
-        if(Object.keys(errors).length===0 && submitting){
-            setBalance((prevState)=> page==="earning"? prevState+ state.amount: prevState-state.amount)
+        if(Object.keys(errors).length===0 && submitting && !edit.id){
+            setBalance((prevState)=> page==="earning"? prevState+ parseInt(state.amount): prevState-parseInt(state.amount))
             setData((prevState)=> [...prevState,state])
             setState({date:"",category:"",amount:0,note:"",type:page})
+        }
+        if(Object.keys(errors).length===0 && submitting && edit.id){
+            setBalance((prevState)=> page==="earning"? prevState + parseInt(state.amount) - parseInt(edit.value.amount)
+                                                     : prevState - parseInt(state.amount) + parseInt(edit.value.amount))
+            setData((prevState)=> prevState.map( item => (item.id===edit.id? state : item) ))
+            setState({date:"",category:"",amount:0,note:"",type:page})
+            setEdit({id:null,value:{}})
         }
      },[errors]
     )
 
+    useEffect(()=>{
+        if(edit.value.type===page)
+          setState({id:edit.id, date:edit.value.date, category:edit.value.category, amount:edit.value.amount, note:edit.value.note, type:page})
+    },[edit])
+    
     return (
         <div className="container">
             <div className="form" >
               <form className= {page==="earning"?"earning-form":"expense-form"} onSubmit={handleSubmit}>
                     <fieldset>
-                         <legend>{page==="earning"?"Add Earning":"Add Expense"}</legend>
+                         <legend>{page==="earning"?(edit.id?"Edit Earning":"Add Earning"):(edit.id?"Edit Expense":"Add Expense")}</legend>
                          <div className="date">
                          <label htmlFor="date">Date: </label>
                             <input 

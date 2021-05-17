@@ -10,6 +10,7 @@ function App(){
 
     const [balance,setBalance]=useState(0)
     const [data,setData]=useState([])
+    const [edit,setEdit] = useState({id:null,value:{}})
 
     return (
       <div>
@@ -17,8 +18,8 @@ function App(){
           <Navbar/>
           <Switch>
             <Route path='/' exact ><Home bal={balance} data={data}/></Route>
-            <Route path='/earnings'><Earnings setBalance={setBalance} data={data} setData={setData} /></Route>
-            <Route path='/expenses'><Expenses setBalance={setBalance} data={data} setData={setData} /></Route>
+            <Route path='/earnings'><Earnings setBalance={setBalance} data={data} setData={setData} edit={edit} setEdit={setEdit}/></Route>
+            <Route path='/expenses'><Expenses setBalance={setBalance} data={data} setData={setData} edit={edit} setEdit={setEdit}/></Route>
             <Route path='/records'><Records data={data}/></Route>
           </Switch>
         </Router>

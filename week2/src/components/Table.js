@@ -1,7 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../styles/Table.css'
 
-export default function Table({data,page,setData,setBalance}) {
+export default function Table({data,page,setData,setBalance,setEdit}) {
     
     const newData= page!=null? data.filter((item)=> item.type===page):data
 
@@ -13,7 +13,7 @@ export default function Table({data,page,setData,setBalance}) {
         }).filter((item)=>item.id!==id)
         setData(removeArr)
       }
-    
+
     return (
         <section>
         <div className="container">
@@ -39,9 +39,15 @@ export default function Table({data,page,setData,setBalance}) {
                             }
                             <td>{item.note}</td>
                             {   
-                                page && <p className="delete" onClick={()=>{deleteRecord(item.id)}}>
-                                          <i className="far fa-trash-alt"></i>
-                                        </p>
+                                page && <>
+                                        <td className="delete" onClick={()=>{deleteRecord(item.id)}}>
+                                          <i className="far fa-trash-alt ">
+                                          </i> 
+                                          </td>
+                                        <td className="edit" onClick={()=>setEdit({id:item.id,value:item})}>
+                                          <i className="far fa-edit"></i>
+                                        </td>
+                                        </>
                             }
                         </tr>)}
                         )
